@@ -31,6 +31,7 @@ if(isset($_SESSION['menu'])){
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('/item','itemController');
 
+    Route::resource('/cat','ItemCategoryController');
 
 }else{
 
@@ -44,5 +45,6 @@ if(isset($_SESSION['menu'])){
 
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('/item','itemController');
-}
 Route::resource('/cat','ItemCategoryController');
+}
+
